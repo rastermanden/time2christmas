@@ -12,12 +12,15 @@
 
   <body ng-controller="christmas">
   <div class="container">
-    <h1>Time left to christmas (24th december)</h1>
-  <div class="row">
-  <div class="col-md-12 text-center"><h1>{{daysLeft}} days</h1></div>
-  <div class="col-md-12 text-center"><h1>{{christmasIsCommming.hours}} hours</h1></div>
-  <div class="col-md-12 text-center"><h1>{{christmasIsCommming.minutes}} minutes</h1></div>
-  <div class="col-md-12 text-center"><h1>{{christmasIsCommming.seconds}} seconds</h1></div>
+    
+  <div class="row text-center">
+    <div class="col-md-12 ">
+      <h1>Time left to christmas (24th december)</h1>
+      <h1>{{daysLeft}} day{{daysLeft != 1 && '' || 's'}}</h1>
+      <h1>{{christmasIsCommming.hours}} hour{{christmasIsCommming.hours != 1 && 's' || ''}}</h1>
+      <h1>{{christmasIsCommming.minutes}} minute{{christmasIsCommming.minutes != 1 && 's' || ''}}</h1>
+      <h1>{{christmasIsCommming.seconds}} second{{christmasIsCommming.seconds != 1 && 's' || ''}}</h1>
+    </div>
   </div>
 
 
